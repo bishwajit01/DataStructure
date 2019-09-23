@@ -3,6 +3,9 @@
  */
 package linkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Bishwajit.
  *
@@ -33,6 +36,15 @@ public class LinkedListApplications {
 
 		// Middle Element of Linked List.
 		middleElement(head);
+
+		// Length of Linked List.
+		lengthLinkedList(head);
+		
+		// Detect a Loop in Linked List.
+		detectLoop(head);
+		// Creating a loop for testing
+		head.addr.addr.addr = head;
+		detectLoop(head);
 	}
 
 	// Traversing Linked List.
@@ -63,4 +75,38 @@ public class LinkedListApplications {
 		System.out.println("Middle Element of Linekd List :: " + slow.data);
 	}
 
+	// Length of Linked List.
+	public static void lengthLinkedList(Node node) {
+		Node root = node;
+		int length = 0;
+		if (root == null) {
+			System.out.println("Length of Linked List " + length);
+			return;
+		}
+		while (root != null) {
+			length++;
+			root = root.addr;
+		}
+		System.out.println("Length of Linked List :: " + length);
+	}
+
+	// Detect a Loop in Linked List.
+	public static void detectLoop(Node node) {
+		Set<Node> root = new HashSet<Node>();
+		boolean found = false;
+		while (node != null) {
+			if (root.contains(node)) {
+				found = true;
+				break;
+			}
+			root.add(node);
+			node = node.addr;
+		}
+		if (found) {
+			System.out.println("Loop Found");
+		} else {
+
+			System.out.println("Loop Not Found");
+		}
+	}
 }
