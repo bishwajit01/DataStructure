@@ -39,12 +39,15 @@ public class LinkedListApplications {
 
 		// Length of Linked List.
 		lengthLinkedList(head);
-		
+
 		// Detect a Loop in Linked List.
 		detectLoop(head);
 		// Creating a loop for testing
-		head.addr.addr.addr = head;
-		detectLoop(head);
+		// head.addr.addr.addr = head;
+		// detectLoop(head);
+		
+		// Reverse a Linked List.
+		reverseLinkedList(head);
 	}
 
 	// Traversing Linked List.
@@ -108,5 +111,21 @@ public class LinkedListApplications {
 
 			System.out.println("Loop Not Found");
 		}
+	}
+
+	// Reverse a LinkedList.
+	public static void reverseLinkedList(Node node) {
+		Node prev = null;
+		Node next = null;
+		Node current = node;
+		while (current != null) {
+			next = current.addr;
+			current.addr = prev;
+			prev = current;
+			current = next;
+		}
+		node = prev;
+		System.out.print("Reverse Linked List :: ");
+		display(node);
 	}
 }
