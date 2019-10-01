@@ -1,4 +1,4 @@
-package matirx;
+package matrix;
 
 /**
  * @author Bishwajit.
