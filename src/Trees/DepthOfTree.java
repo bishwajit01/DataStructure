@@ -5,7 +5,6 @@ package Trees;
  *
  */
 public class DepthOfTree {
-	Node root;
 
 	static class Node {
 		int key;
