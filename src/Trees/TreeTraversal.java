@@ -95,13 +95,13 @@ public class TreeTraversal {
 	}
 
 	private void printAtAGivenLevel(Node node, int level) {
-		if (root == null) {
+		if (node == null) {
 			return;
 		} else if (level == 1) {
 			System.out.print(node.key + " ");
 		} else {
-			printAtAGivenLevel(root.left, level - 1);
-			printAtAGivenLevel(root.right, level - 1);
+			printAtAGivenLevel(node.left, level - 1);
+			printAtAGivenLevel(node.right, level - 1);
 		}
 	}
 }
