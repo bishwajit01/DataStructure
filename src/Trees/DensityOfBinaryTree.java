@@ -2,6 +2,7 @@ package Trees;
 
 /**
  * @author Bishwajit.
+ * Density of a Tree = Size of the Tree / Height of the Tree.
  *
  */
 public class DensityOfBinaryTree {
