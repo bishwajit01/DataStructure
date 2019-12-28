@@ -3,9 +3,10 @@ package Trees;
 /**
  * @author Bishwajit.
  * 
- *         A Tree is balanced, if :: 1. Left subtree of T is balanced. 2. Right
- *         subtree of T is balanced. 3. The difference between heights of left
- *         subtree and right subtree is not more than 1.
+ *         A Tree is balanced, if :: 
+ *         1. Left subtree of T is balanced.
+ *         2. Right subtree of T is balanced. 
+ *         3. The difference between heights of left subtree and right subtree is not more than 1.
  *
  */
 public class BalancedTree {
@@ -35,6 +36,7 @@ public class BalancedTree {
 		root.right = new Node(3);
 		root.left.left = new Node(4);
 		root.left.right = new Node(5);
+		
 		// Add this node to make take unbalanced.
 		// root.left.left.left = new Node(8);
 
